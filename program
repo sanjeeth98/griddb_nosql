@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+   int sum=0,x1,p1;
+   scanf("%d %d",&x1,&p1);
+   if(p1>=0 && p1<=100 && x1>=1 && x1<=10000)
+   {
+       p1=100-p1;
+       while(x1>0)
+       {
+           sum=sum+x1;
+           x1=(p1*x1)/100;
+       }
+       printf("%d",sum);
+   }
+   else 
+   printf("invalid inputs");
+   return 0;
+}
